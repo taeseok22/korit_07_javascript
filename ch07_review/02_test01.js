@@ -1,10 +1,8 @@
-// 폼 요소 가져오기
 const loginForm = document.getElementById("loginForm");
 const signupForm = document.getElementById("signupForm");
 const showSignup = document.getElementById("showSignup");
 const showLogin = document.getElementById("showLogin");
 
-// 로그인 로직
 loginForm.addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -21,7 +19,7 @@ loginForm.addEventListener("submit", function (e) {
   }
 });
   
-// 회원가입 로직
+
 signupForm.addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -36,13 +34,12 @@ signupForm.addEventListener("submit", function (e) {
     return;
   }
 
-  // 회원가입 성공 처리
   message.style.color = "green";
   message.textContent = "회원가입 성공!";
-  // 여기에 서버 저장 등 백엔드 연동 추가 가능
+
 });
 
-// 폼 전환
+
 showSignup.addEventListener("click", () => {
   loginForm.style.display = "none";
   signupForm.style.display = "block";
